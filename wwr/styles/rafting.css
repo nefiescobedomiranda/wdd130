@@ -1,6 +1,5 @@
 :root {
     --primary-color: #055a05;
-    --secondary-color: #f4a261;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
     --white: #ffffff;
@@ -33,6 +32,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: var(--white);
 }
 
 nav ul {
@@ -128,4 +128,12 @@ footer {
 
 .socialmedia img:hover {
     transform: scale(1.1);
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
 }
