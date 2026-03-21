@@ -1,19 +1,11 @@
 :root {
     --primary-color: #055a05;
-    /* forest green */
     --secondary-color: #f4a261;
-    /* warm sand */
     --accent1-color: #264653;
-    /* dark slate blue */
     --accent2-color: #e9c46a;
-    /* light golden yellow */
+    --white: #ffffff;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
-}
-
-header {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
 }
 
 * {
@@ -25,6 +17,7 @@ header {
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.6;
 }
 
 header,
@@ -34,20 +27,105 @@ footer {
     margin: 0 auto;
 }
 
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
 }
 
-.socialmedia a {
+nav ul li a {
     text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--accent2-color);
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(5, 90, 5, 0.7);
+    color: var(--white);
+    font-family: var(--heading-font);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.hero article img {
+    float: right;
+    width: 150px;
+    margin-left: 15px;
+    border: 2px solid var(--white);
+}
+
+section h2 {
+    background-color: var(--accent1-color);
+    color: var(--white);
+    text-align: center;
+    padding: 15px 0;
+    margin: 40px 0 20px 0;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section p {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.socialmedia img {
+    width: 60px;
+    transition: transform 0.3s ease;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.1);
 }
